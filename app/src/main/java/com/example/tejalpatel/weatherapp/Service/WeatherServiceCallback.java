@@ -8,7 +8,7 @@ import com.example.tejalpatel.weatherapp.data.Channel;
 
 public interface WeatherServiceCallback {
 
-    Void serviceSuccess (Channel channel);
+    void serviceSuccess (Channel channel);
 
     void  serviceFailure(Exception exception);
 }

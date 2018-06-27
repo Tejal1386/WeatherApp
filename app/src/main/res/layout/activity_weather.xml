@@ -13,7 +13,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/weatherIconImageView"
+        android:id="@+id/imageViewWeatherIcon"
         android:layout_alignParentTop="true"
         android:src="@drawable/icon_na"
         android:layout_centerHorizontal="true"
@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/temperature"
-        android:id="@+id/temperatureTextView"
-        android:layout_below="@+id/weatherIconImageView"
+        android:id="@+id/textViewTemperature"
+        android:layout_below="@+id/imageViewWeatherIcon"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
         android:typeface="serif" />
@@ -35,8 +35,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/condition"
-        android:id="@+id/conditionTextView"
-        android:layout_below="@+id/temperatureTextView"
+        android:id="@+id/textViewCondition"
+        android:layout_below="@+id/textViewTemperature"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -44,8 +44,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/location"
-        android:id="@+id/locationTextView"
-        android:layout_below="@+id/conditionTextView"
+        android:id="@+id/textViewLocation"
+        android:layout_below="@+id/textViewCondition"
         android:layout_centerHorizontal="true"
         android:textStyle="bold" />
 
