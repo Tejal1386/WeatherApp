@@ -25,6 +25,7 @@
         android:layout_below="@+id/weatherIconImageView"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:typeface="serif"
         android:textAllCaps="true"
         android:fontFamily="sans-serif-condensed"
@@ -35,6 +36,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/high"
+        android:textSize="15dp"
+        android:textColor="@color/black"
         android:id="@+id/highTemperatureTextView"
         android:layout_below="@+id/dayTextView"
         android:layout_centerHorizontal="true"
@@ -45,9 +48,10 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/low"
+        android:textSize="15dp"
         android:id="@+id/lowTemperatureTextView"
         android:layout_below="@+id/highTemperatureTextView"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/light_text" />
+        android:textColor="@color/white" />
 
 </RelativeLayout>

@@ -8,6 +8,8 @@
     <string name="day">Day</string>
     <string name="high">High</string>
     <string name="low">Low</string>
+    <string name="loading">loading</string>
+
     <string name="temperature_output">%1$d&#176;%2$s</string>
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -27,7 +27,6 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
     private TextView locationTextView;
     private Spinner spnLocation;
     private YahooWeatherService service;
-   // private WeatherCacheService cacheService;
     private ProgressDialog dialog;
 
     String location;
@@ -42,7 +41,10 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
         locationTextView = (TextView) findViewById(R.id.textViewLocation);
         spnLocation = (Spinner) findViewById(R.id.spnLocation);
 
-
+        dialog = new ProgressDialog(this);
+        dialog.setMessage(getString(R.string.loading));
+        dialog.setCancelable(false);
+        dialog.show();
 
 
         spnLocation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -51,8 +53,8 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
                 location = spnLocation.getSelectedItem().toString();
 
                 service = new YahooWeatherService(WeatherActivity.this);
-                // dialog.setMessage("Loading...");
-                // dialog.show();
+                 dialog.setMessage("Loading...");
+                 dialog.show();
                 service.refreshWeather(location);
             }
 
@@ -73,7 +75,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
 
     @Override
     public void serviceSuccess(Channel channel) {
-       // dialog.hide();
+        dialog.hide();
 
         Items items = channel.getItem();
         int resourceID = getResources().getIdentifier("drawable/icon_"+ channel.getItem().getCondition().getCode(),null,getPackageName());
@@ -93,7 +95,7 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
 
 
         for (int day = 0; day < forecast.length; day++) {
-            if (day >= 5) {
+            if (day >= 6) {
                 break;
             }
 
@@ -107,7 +109,6 @@ public class WeatherActivity extends AppCompatActivity implements WeatherService
             }
         }
 
-      //  cacheService.save(channel);
 
     }
 
